@@ -74,10 +74,6 @@ function Navbar() {
 
                     {isAuthenticated ? (
                         <div className="flex items-center gap-3">
-                            <span className="text-[10px] font-bold tracking-[0.15em] uppercase px-2.5 py-1 rounded-full bg-[#00E887]/10 text-[#00E887] border border-[#00E887]/20 flex items-center gap-1.5">
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#00E887] animate-pulse" />
-                                Pro
-                            </span>
                             <button
                                 onClick={handleLogout}
                                 className="text-sm font-medium text-[#8891A0] hover:text-[#FF5C5C] transition-colors"
