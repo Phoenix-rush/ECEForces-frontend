@@ -90,7 +90,7 @@ function Login() {
                 </form>
 
                 <p className="mt-8 text-center text-sm text-[#8891A0]">
-                    Don't have beta access? <Link to="/signup" className="text-[#00E887] font-medium hover:underline">Apply here</Link>
+                    Don't have an account? <Link to="/signup" className="text-[#00E887] font-medium hover:underline">Sign up here</Link>
                 </p>
             </div>
         </div>
