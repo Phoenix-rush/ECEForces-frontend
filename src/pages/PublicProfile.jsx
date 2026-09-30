@@ -135,7 +135,7 @@ function PublicProfile() {
                 <div className="flex-shrink-0">
                     <div className="w-28 h-28 rounded-xl bg-[#06080A] border-2 border-white/[0.08] flex items-center justify-center overflow-hidden">
                         {fullAvatarUrl ? (
-                            <img src={fullAvatarUrl} alt="Avatar" className="w-full h-full object-cover" />
+                            <img src={fullAvatarUrl} alt="Avatar" className="w-full h-full object-cover" onError={(e) => { e.target.onerror = null; e.target.src = `https://api.dicebear.com/9.x/glass/svg?seed=${displayName}`; }} />
                         ) : (
                             <span className="font-mono text-3xl font-semibold text-[#8891A0]">{initials}</span>
                         )}

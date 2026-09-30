@@ -163,7 +163,7 @@ function Profile() {
                             {uploading ? (
                                 <span className="w-6 h-6 border-2 border-white/20 border-t-[#00E887] rounded-full animate-spin"></span>
                             ) : fullAvatarUrl ? (
-                                <img src={fullAvatarUrl} alt="Avatar" className="w-full h-full object-cover" />
+                                <img src={fullAvatarUrl} alt="Avatar" className="w-full h-full object-cover" onError={(e) => { e.target.onerror = null; e.target.src = `https://api.dicebear.com/9.x/glass/svg?seed=${profile.email.split('@')[0]}`; }} />
                             ) : (
                                 <span className="font-mono text-3xl font-semibold text-[#8891A0]">{initials}</span>
                             )}
@@ -184,7 +184,7 @@ function Profile() {
 
                 <div className="flex-1 text-center md:text-left">
                     <h1 className="text-3xl font-bold text-[#EAEDF0] mb-1.5">{profile.email.split('@')[0]}</h1>
-                    <p className="text-sm text-[#8891A0]">Beta user &middot; Joined {new Date(profile.joinedAt).toLocaleDateString()}</p>
+                    <p className="text-sm text-[#8891A0]">Member &middot; Joined {new Date(profile.joinedAt).toLocaleDateString()}</p>
                 </div>
 
                 {/* Stats Blocks */}
